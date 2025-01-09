@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    font-family: "Inter";
+}
+
+header {
+    padding: 10px;
+    background: #ffffff;
+}
+
+.nav-container {
+    align-items: center;
+}
+
+.logo {
+    width: 50px;
+}
+
+.logo:hover {
+    cursor: pointer;
+}
+
+.desktop-menu {
+    margin-top: 10px;
+    height: 100%;
+}
+
+.desktop-menu ul {
+    padding: 0;
+    margin: 0;
+}
+
+.desktop-menu ul li {
+    height: 100%;
+    list-style-type: none;
+    display: inline-block;
+    font-size: 18px;
+    margin: 0 26px;
+    transition: 0.3s ease-in-out;
+}
+
+.desktop-menu ul li a {
+    color: #888888;
+    text-decoration: none;
+}
+
+.desktop-menu ul li a:hover {
+    color: #000;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    border-bottom: 1px solid #000;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (min-width: 128px) and (max-width: 990px) {
+    .desktop-menu {
+        position: fixed;
+        transition: .4s ease-in-out;
+        right: -120px;
+        top: 60px;
+        background: #fff;
+        width: 120px;
+        height: 100%;
+    }
+
+    .desktop-menu ul li {
+        display: block;
+        text-align: end;
+        margin: 0;
+        padding: 10px 26px 10px 0;
+        border-bottom: 1px solid #ffffff;
+    }
+
+    .menu-icon {
+        display: block;
+        color: #000;
+        font-size: 30px;
+        padding: 10px;
+    }
+
+    .mobile_menu {
+        right: 0;
+        transition: .4s ease-in-out;
+    }
+}
