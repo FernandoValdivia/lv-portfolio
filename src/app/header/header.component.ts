@@ -17,6 +17,8 @@ export class HeaderComponent {
   openMenu() {
     this.menuValue =!this.menuValue;
     this.menu_icon = this.menuValue ? 'bi bi-x' : 'bi bi-list';
+    // quitar el overflow del body
+    document.body.style.overflow = this.menuValue? 'hidden' : 'auto';  // para que siga funcionando cuando el menú está abierto/cerrado
   }
 
   closeMenu() {
