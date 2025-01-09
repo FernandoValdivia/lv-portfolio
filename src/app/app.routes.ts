@@ -9,6 +9,6 @@ export const routes: Routes = [
     },
     {
         path: 'fernando',
-        component: FernandoComponent
+        loadComponent: () => import('./fernando/fernando.component').then((c) => c.FernandoComponent),
     },
 ];
