@@ -1,3 +1,34 @@
 .hero-container {
-    
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 70px);  /* Ocupa todo el alto de la pantalla */
+    /* height: 100vh; */
+}
+
+.left-container, .right-container {
+    flex: 1; /* Cada contenedor ocupa el 50% */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-container {
+    background: url('https://res.cloudinary.com/lvaldivia/image/upload/v1657300063/about-me/slides/1_u9nxcs.jpg') no-repeat center center;
+    background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+}
+
+.right-container {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Centra el texto completamente */
+}
+
+@media screen and (min-width: 128px) and (max-width: 990px) {
+    .hero-container {
+        flex-direction: column;
+
+    }
 }

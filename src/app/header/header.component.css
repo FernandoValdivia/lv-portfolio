@@ -1,16 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-
-body {
-    font-family: "Inter";
-}
-
-header {
-    padding: 10px;
-    background: #ffffff;
-}
-
 .nav-container {
+    display: flex;
+    padding: 10px;
     align-items: center;
+    position: relative;
+    width: 100%;
+    z-index: 1;
 }
 
 .logo {
@@ -24,6 +18,7 @@ header {
 .desktop-menu {
     margin-top: 10px;
     height: 100%;
+    background: #fff;
 }
 
 .desktop-menu ul {
@@ -36,6 +31,7 @@ header {
     list-style-type: none;
     display: inline-block;
     font-size: 18px;
+    font-weight: 300;
     margin: 0 26px;
     transition: 0.3s ease-in-out;
 }
@@ -57,12 +53,15 @@ header {
 }
 
 @media screen and (min-width: 128px) and (max-width: 990px) {
+    header {
+        overflow: hidden !important;
+    }
+
     .desktop-menu {
         position: fixed;
         transition: .4s ease-in-out;
         right: -120px;
         top: 60px;
-        background: #fff;
         width: 120px;
         height: 100%;
     }
@@ -72,7 +71,10 @@ header {
         text-align: end;
         margin: 0;
         padding: 10px 26px 10px 0;
-        border-bottom: 1px solid #ffffff;
+    }
+
+    .desktop-menu ul {
+        background-color: #fff;
     }
 
     .menu-icon {
