@@ -17,7 +17,7 @@
 
     filter: grayscale(70%) brightness(80%);
     background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
-    transition: opacity 1.8s ease-in-out, background-image 1s ease-in-out;
+    transition: opacity 1s ease-in-out, background-image .2s ease-in-out;
     opacity: 1;
 }
 

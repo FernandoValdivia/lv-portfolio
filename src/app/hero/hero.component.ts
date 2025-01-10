@@ -30,7 +30,7 @@ export class HeroComponent implements OnInit {
 
           // Remover la clase para hacer visible la nueva imagen
           leftContainer.classList.remove('fade-out');
-        }, 500); // Tiempo sincronizado con el CSS (1s)
+        }, 200); // Tiempo sincronizado con el CSS (1s)
       }, 3000); // Cambiar cada 3 segundos
     }
   }
