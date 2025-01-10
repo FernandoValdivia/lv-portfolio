@@ -13,8 +13,16 @@
 }
 
 .left-container {
-    background: url('https://res.cloudinary.com/lvaldivia/image/upload/v1657300063/about-me/slides/1_u9nxcs.jpg') no-repeat center center;
+    background: url('https://res.cloudinary.com/lvaldivia/image/upload/f_auto,q_auto/v1/lv-portfolio/hero/fhffrv0svwjczpemsfka') no-repeat center center;
+
+    filter: grayscale(70%) brightness(80%);
     background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
+    transition: opacity 1.8s ease-in-out, background-image 1s ease-in-out;
+    opacity: 1;
+}
+
+.left-container.fade-out {
+    opacity: 0;
 }
 
 .right-container {
@@ -29,6 +37,5 @@
 @media screen and (min-width: 128px) and (max-width: 990px) {
     .hero-container {
         flex-direction: column;
-
     }
 }
