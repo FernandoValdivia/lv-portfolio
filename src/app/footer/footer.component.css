@@ -56,11 +56,11 @@
     .footer-container {
         text-align: center;
         flex-direction: column;
+        gap: 2rem;
         height: fit-content;
     }
 
     .footer-nav {
         flex-direction: column;
-        padding: 10px 0;
     }
 }

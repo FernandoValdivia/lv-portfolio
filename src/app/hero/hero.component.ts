@@ -14,24 +14,34 @@ export class HeroComponent implements OnInit {
   ];
 
   currentIndex: number = 0;
+  isBackground1Active: boolean = true; // Alterna entre background1 y background2
 
   ngOnInit(): void {
-    const leftContainer = document.querySelector('.left-container') as HTMLDivElement;
+    const background1 = document.querySelector('.background1') as HTMLDivElement;
+    const background2 = document.querySelector('.background2') as HTMLDivElement;
 
-    if (leftContainer) {
+    if (background1 && background2) {
+      // Configura la primera imagen
+      background1.style.backgroundImage = `url('${this.imagenes[this.currentIndex]}')`;
+      background1.classList.add('active');
+
       setInterval(() => {
-        // Añadir la clase para iniciar el efecto de desvanecimiento
-        leftContainer.classList.add('fade-out');
+        // Alterna entre las dos capas
+        const nextIndex = (this.currentIndex + 1) % this.imagenes.length;
+        const activeBackground = this.isBackground1Active ? background1 : background2;
+        const nextBackground = this.isBackground1Active ? background2 : background1;
 
-        // Cambiar la imagen después de la transición
-        setTimeout(() => {
-          this.currentIndex = (this.currentIndex + 1) % this.imagenes.length;
-          leftContainer.style.backgroundImage = `url('${this.imagenes[this.currentIndex]}')`;
+        // Cambia la imagen en la capa no activa
+        nextBackground.style.backgroundImage = `url('${this.imagenes[nextIndex]}')`;
 
-          // Remover la clase para hacer visible la nueva imagen
-          leftContainer.classList.remove('fade-out');
-        }, 200); // Tiempo sincronizado con el CSS (1s)
-      }, 3000); // Cambiar cada 3 segundos
+        // Activa la capa siguiente y desactiva la actual
+        nextBackground.classList.add('active');
+        activeBackground.classList.remove('active');
+
+        // Actualiza el índice y alterna la capa activa
+        this.currentIndex = nextIndex;
+        this.isBackground1Active = !this.isBackground1Active;
+      }, 2000); // Cambia cada segundo
     }
   }
 }

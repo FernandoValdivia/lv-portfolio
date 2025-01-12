@@ -13,12 +13,29 @@
 }
 
 .left-container {
-    background: url('https://res.cloudinary.com/lvaldivia/image/upload/f_auto,q_auto/v1/lv-portfolio/hero/fhffrv0svwjczpemsfka') no-repeat center center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    background-color: black;
+    filter: grayscale(70%) brightness(70%);
+}
 
-    filter: grayscale(70%) brightness(80%);
-    background-size: cover; /* Hace que la imagen ocupe todo el contenedor */
-    transition: opacity 1s ease-in-out, background-image .2s ease-in-out;
+.left-container .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 0;
+    z-index: 0;
+}
+
+.left-container .background.active {
     opacity: 1;
+    z-index: 1; /* La imagen activa se superpone */
 }
 
 .left-container.fade-out {
