@@ -12,8 +12,8 @@ export const routes: Routes = [
         loadComponent: () => import('./fernando/fernando.component').then((c) => c.FernandoComponent),
     },
     {
-        path: 'servicios',
-        loadComponent: () => import('./servicios/servicios.component').then((c) => c.ServiciosComponent),
+        path: 'experiencia',
+        loadComponent: () => import('./experiencia/experiencia.component').then((c) => c.ExperienciaComponent),
     },
     {
         path: 'portafolio',
@@ -22,5 +22,5 @@ export const routes: Routes = [
     {
         path: 'contacto',
         loadComponent: () => import('./contacto/contacto.component').then((c) => c.ContactoComponent),
-    }
+    },
 ];
