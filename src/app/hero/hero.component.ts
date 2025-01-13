@@ -7,10 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeroComponent implements OnInit {
   imagenes: string[] = [
-    "https://res.cloudinary.com/lvaldivia/image/upload/f_auto,q_auto/v1/lv-portfolio/hero/fhffrv0svwjczpemsfka",
-    "https://res.cloudinary.com/lvaldivia/image/upload/f_auto,q_auto/v1/lv-portfolio/hero/snage4hasayszyqefufe",
-    "https://res.cloudinary.com/lvaldivia/image/upload/f_auto,q_auto/v1/lv-portfolio/hero/wzssetafmepa9oodityo",
-    "https://res.cloudinary.com/lvaldivia/image/upload/f_auto,q_auto/v1/lv-portfolio/hero/b9si9phorsj5asskj8a1",
+    "https://res.cloudinary.com/lvaldivia/image/upload/v1736736949/lv-portfolio/hero/hero-1.webp",
+    "https://res.cloudinary.com/lvaldivia/image/upload/v1736736949/lv-portfolio/hero/hero-2.webp",
+    "https://res.cloudinary.com/lvaldivia/image/upload/v1736736949/lv-portfolio/hero/hero-3.webp",
+    "https://res.cloudinary.com/lvaldivia/image/upload/v1736736949/lv-portfolio/hero/hero-4.webp",
   ];
 
   currentIndex: number = 0;
