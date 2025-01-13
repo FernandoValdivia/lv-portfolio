@@ -5,6 +5,14 @@
     position: relative;
     width: 100%;
     z-index: 1;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    
 }
 
 .logo:hover {
@@ -12,7 +20,6 @@
 }
 
 .desktop-menu {
-    margin-top: 10px;
     height: 100%;
 }
 
@@ -55,11 +62,12 @@
     .desktop-menu {
         position: fixed;
         transition: .4s ease-in-out;
-        right: -120px;
+        right: -150px;
         top: 60px;
-        width: 120px;
+        width: 140px;
         height: 100%;
         background: #fff;
+        margin-top: 10px;
     }
 
     .desktop-menu ul li {
