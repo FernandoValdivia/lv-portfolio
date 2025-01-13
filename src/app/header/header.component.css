@@ -7,10 +7,6 @@
     z-index: 1;
 }
 
-.logo {
-    width: 50px;
-}
-
 .logo:hover {
     cursor: pointer;
 }
@@ -18,7 +14,6 @@
 .desktop-menu {
     margin-top: 10px;
     height: 100%;
-    background: #fff;
 }
 
 .desktop-menu ul {
@@ -37,7 +32,7 @@
 }
 
 .desktop-menu ul li a {
-    color: #888888;
+    color: #a0a0a0;
     text-decoration: none;
 }
 
@@ -64,6 +59,7 @@
         top: 60px;
         width: 120px;
         height: 100%;
+        background: #fff;
     }
 
     .desktop-menu ul li {
@@ -71,10 +67,6 @@
         text-align: end;
         margin: 0;
         padding: 10px 26px 10px 0;
-    }
-
-    .desktop-menu ul {
-        background-color: #fff;
     }
 
     .menu-icon {
