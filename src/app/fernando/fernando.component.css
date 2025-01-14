@@ -63,9 +63,9 @@
     width: 40px;
     height: 40px;
     font-size: 20px;
-    border: solid 1px #5a5a5a;
-    border-radius: 30px;
-    color: #5a5a5a;
+    border: solid 1px #a0a0a0;
+    border-radius: 5px;
+    color: #a0a0a0;
     text-decoration: none;
     transition: all 0.3s ease-in-out;
 }
@@ -80,6 +80,11 @@
     gap: 10px;
     padding: 5px 0;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.skill {
+    width: 100%;
 }
 
 .skills-container {
@@ -90,7 +95,7 @@
 
 .skill h4 {
     font-size: 18px;
-    margin-bottom: 8px;
+    margin: 10px 0;
 }
 
 .card-item {
@@ -99,11 +104,10 @@
     align-items: center;
     width: 90px;
     height: 90px;
-    color: #5a5a5a;
-    border: 1px solid #5a5a5a;
+    border: 1px solid #a0a0a0;
     border-radius: 8px;
     transition: all 0.3s ease-in-out;
-    filter: grayscale(.9) brightness(1.5) contrast(.2);
+    filter: grayscale(95%) brightness(130%);
 }
 
 .card-item img {
@@ -124,5 +128,15 @@
 
     .details-container {
         padding: 20px;
+    }
+
+    .devweb-container {
+        justify-content: space-around;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .devweb-container {
+        justify-content: center;
     }
 }
