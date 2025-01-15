@@ -43,6 +43,7 @@
     text-decoration: none;
 }
 
+.desktop-menu ul li a.active,
 .desktop-menu ul li a:hover {
     color: #000;
     cursor: pointer;
